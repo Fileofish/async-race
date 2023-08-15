@@ -1,0 +1,59 @@
+.window-navigation,
+.filter-form,
+.race-list {
+  max-width: 1280px;
+  margin: 30px auto;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.inactive,
+button.inactive:hover,
+button.inactive:active {
+  color: $color-inactive;
+  border: 2px solid $color-inactive;
+  background-color: $color-background-inactive;
+  cursor: no-drop;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.window-winners__pagination-button,
+.race-list__pagination-button,
+.filter-form__button {
+  @include button();
+}
+
+.window-winners__pagination-button:hover,
+.filter-form__button:hover,
+.race-list__button:hover,
+.race-list__move-button:hover,
+.race-list__pagination-button:hover {
+  @include button-hover();
+}
+
+.window-winners__pagination-button:active,
+.filter-form__button:active,
+.race-list__button:active,
+.race-list__move-button:active,
+.race-list__pagination-button:active,
+.window-navigation__button:active {
+  @include button-active();
+}
+
+.race-list__title,
+.window-winners__title {
+  @include text-style($font-primary-bold, $font-size-header-large, $color-alt);
+  letter-spacing: 2px;
+  text-shadow: 0 3px 8px rgba(30, 255, 0, 0.6);
+}
+
+.race-list__page-title,
+.window-winners__page-title {
+  margin: 10px 0;
+  @include text-style($font-primary-bold, $font-size-header-medium, $color-alt);
+  letter-spacing: 1.6px;
+  text-shadow: 0 3px 8px rgba(30, 255, 0, 0.6);
+}

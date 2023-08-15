@@ -1,0 +1,58 @@
+.window-winners {
+  @include position(fixed, 0, 0, 0, 0);
+  display: none;
+  background-color: $color-background;
+  margin-top: 105px;
+  padding: 0 30px;
+  overflow: auto;
+  z-index: 2;
+
+  &__pagination-button {
+    @include width-height(100px, 30px);
+    margin: 30px 20px 0 0;
+  }
+  
+  .table-leaders {
+    @include text-style($font-primary-regular, $font-size-medium, $color-alt);
+    margin-top: 30px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+
+    &__sort-params {
+      display: none;
+    }
+
+    td {
+      padding: 3px 0;
+    }
+
+    tr:nth-child(even) {
+      background-color: $color-background-inactive
+    }
+
+    &__number-head,
+    &__car-head,
+    &__name-head,
+    &__wins-head,
+    &__time-head {
+      @include width-height(120px, 30px);
+      background-color: $color-alt-placeholder-focus;
+    }
+
+    &__number-head,
+    &__wins-head,
+    &__time-head {
+      cursor: pointer;
+    }
+  }
+
+  .table-car {
+    @include width-height(60px, 15px);
+    transform: translateY(2px);
+  }
+}
+
+.window-winners.active {
+  display: block;
+}

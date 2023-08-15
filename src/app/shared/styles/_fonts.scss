@@ -1,0 +1,17 @@
+@font-face {
+  src: url("assets/fonts/Kanit-Regular.ttf");
+  font-family: "Kanit Regular";
+}
+
+@font-face {
+  src: url("assets/fonts/Kanit-Bold.ttf");
+  font-family: "Kanit Bold";
+}
+
+$font-primary-regular: "Kanit Regular", sans-serif;
+$font-primary-bold: "Kanit Bold", sans-serif;
+
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-header-medium: 24px;
+$font-size-header-large: 32px;

@@ -1,0 +1,26 @@
+* {
+  @include padding-margin(0, 0);
+}
+
+.play-page {
+  max-width: 1280px;
+  padding: 15px 40px;
+  background-color: $color-background;
+}
+
+.play-page.scrollOff {
+  overflow: hidden;
+}
+
+.win-message {
+  @include position(fixed, 50%, 0, 0, 0);
+  @include text-style($font-primary-bold, $font-size-header-large, $color-alt);
+  text-align: center;
+  z-index: 3;
+  animation: get-win-message 1.5s ease-in;
+}
+
+@keyframes get-win-message {
+  from {left: -5000px;}
+  to {left: 0;}
+}

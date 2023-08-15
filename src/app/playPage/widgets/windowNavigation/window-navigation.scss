@@ -1,0 +1,22 @@
+.window-navigation {
+  &__button {
+    @include width-height(180px, 40px);
+    @include button($color-background-inputs-focus, $font-size-medium, $font-primary-bold, $color-alt-hover, 3px 20px, 2px solid $color-alt-hover);
+    letter-spacing: 1px;
+    margin-right: 25px;
+  }
+
+  &__button.active,
+  &__button:hover {
+    @include button-hover($color-alt, 2px solid $color-alt, 0 5px 15px rgba(238, 255, 0, 0.6));
+    background-color: $color-alt-placeholder;
+  }
+
+  &__button:focus {
+    outline: none;
+  }
+
+  &__button:active {
+    background-color: $color-background-inputs-focus;
+  }
+}

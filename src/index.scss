@@ -1,0 +1,11 @@
+@import 'app/shared/styles/fonts';
+@import 'app/shared/styles/colors';
+@import 'app/shared/styles/mixins';
+@import 'app/shared/styles/media-mixins';
+
+@import 'app/playPage/play-page';
+@import 'app/playPage/widgets/windowNavigation/window-navigation';
+@import 'app/playPage/widgets/filterForm/filterForm';
+@import 'app/playPage/widgets/raceList/race-list';
+@import 'app/playPage/widgets/windowWinners/windowWinners';
+@import 'app/shared/styles/base';

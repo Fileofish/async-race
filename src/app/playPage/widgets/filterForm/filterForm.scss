@@ -1,0 +1,102 @@
+.filter-form {
+
+  &__wrapper {
+    @include flex(flex, center);
+    margin-bottom: 13px;
+  }
+
+  .input--new-name-car.active,
+  &__text-input {
+    @include width-height(245px, 30px);
+    @include text-style($font-primary-regular, $font-size-small, $color-alt);
+    padding: 2px 8px;
+    box-sizing: border-box;
+    background-color: $color-background-inputs;
+    border: 2px solid $color-alt;
+    transition: all 0.3s;
+    cursor: text;
+  }
+
+  .input--new-name-car.active:focus,
+  &__text-input:focus {
+    @include text-style($font-primary-regular, $font-size-small, $color-alt-hover);
+    background-color: $color-background;
+    border: 2px solid $color-alt-hover;
+    outline: none;
+  }
+
+  .input--new-name-car.active::-moz-placeholder,
+  &__text-input::-moz-placeholder {
+    color: $color-alt-placeholder;
+  }
+
+  .input--new-name-car.active::-webkit-input-placeholder,
+  &__text-input::-webkit-input-placeholder {
+    color: $color-alt-placeholder;
+  }
+
+  .input--new-name-car.active:focus::-moz-placeholder,
+  &__text-input:focus::-moz-placeholder {
+    color: $color-alt-placeholder-focus;
+  }
+
+  .input--new-name-car.active:focus::-webkit-input-placeholder,
+  &__text-input:focus::-webkit-input-placeholder {
+    color: $color-alt-placeholder-focus;
+  }
+
+  .input--new-color-car.active,
+  &__color-input {
+    @include width-height(40px, 31px);
+    @include border(none, 3px);
+    margin: 0 10px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: $color-background-inputs;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &__color-input:focus {
+    border: 0.5px solid $color-alt-hover;
+    background-color: $color-background-inputs-focus;
+  }
+
+  &__color-input::-webkit-color-swatch-wrapper {
+    padding: 3px;
+  }
+
+  &__color-input::-webkit-color-swatch {
+    @include border(none, 3px);
+  }
+
+  .input--new-color-car,
+  .input--new-name-car {
+    color: $color-inactive;
+    background-color: $color-background-inactive;
+    border: 2px solid $color-inactive;
+    cursor: no-drop;
+  }
+
+  .input--new-name-car::-moz-placeholder {color: $color-inactive;}
+  .input--new-name-car::-webkit-input-placeholder {color: $color-inactive;}
+  .input--new-name-car:focus::-moz-placeholder {color: $color-inactive;}
+  .input--new-name-car:focus::-webkit-input-placeholder {color: $color-inactive;}
+
+  .button--create,
+  .button--update {
+    @include width-height(80px, 30px);
+    box-sizing: border-box;
+  }
+
+  .button--race,
+  .button--reset,
+  .button--generate-cars {
+    @include width-height(122px, 30px);
+    margin-right: 10px;
+  }
+
+  .button--reset:active {
+    @include button-active($color-reset, 2px solid $color-reset, 0 3px 8px rgba(255, 0, 0, 0.6));
+  }
+}

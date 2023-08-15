@@ -1,0 +1,5 @@
+@mixin w_1240 {
+  @media (max-width: 1240px){
+      @content;
+  }
+}

@@ -1,0 +1,74 @@
+.race-list {
+
+  &__row-car {
+    position: relative;
+    border-bottom: 3px dashed $color-alt-hover;
+    box-shadow: 0 7px 0 rgba(0, 255, 225, 0.1);
+  }
+
+  &__car {
+    @include width-height (100px, 45px);
+    transform: translateY(9px);
+  }
+
+  &__row-car {
+    @include flex(flex, flex-end, space-between)
+  }
+
+  &__common-wrapper {
+    @include flex(flex, flex-start)
+  }
+
+  &__car-name {
+    @include text-style($font-primary-bold, $font-size-medium, $color-alt);
+    letter-spacing: 1.5px;
+    margin: 20px 0;
+  }
+
+  &__button {
+    @include width-height(70px, 25px);
+    @include button($color-alt, $font-size-small, $font-primary-bold, $color-background, 0 5px);
+    margin: 20px 0;
+    margin-right: 8px;
+  }
+
+  .race-list__button--remove {
+    @include button($color-reset, $font-size-small, $font-primary-bold, $color-background, 0 5px, 2px solid $color-reset);
+  }
+
+  .race-list__button--remove:active {
+    @include button-active($color-reset, 2px solid $color-reset, $box-shadow: 0 3px 8px rgba(255, 0, 0, 0.6));
+    background-color: $color-background;
+  }
+
+  &__button:hover {
+    background-color: $color-background-inputs-focus;
+  }
+
+  &__move-button {
+    margin: 0 10px 20px 0;
+    @include width-height(25px, 25px);
+    @include button($color-background, $font-size-small, $font-primary-bold, $color-accept, 0 0, 2px solid $color-accept);
+  }
+
+  &__move-button--stop {
+    @include button($color-background, $font-size-small, $font-primary-bold, $color-reset, 0 0, 2px solid $color-reset);
+  }
+
+  &__move-button--stop:active {
+    @include button-active($color-reset, 2px solid $color-reset, $box-shadow: 0 3px 8px rgba(255, 0, 0, 0.6));
+  }
+
+  &__flag {
+    @include width-height(40px, 40px);
+    @include background(url('./assets/img/flag.png'));
+    position: absolute;
+    right: 100px;
+    z-index: 1;
+  }
+
+  &__pagination-button {
+    @include width-height(100px, 30px);
+    margin: 30px 20px 0 0;
+  }
+}
